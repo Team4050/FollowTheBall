@@ -20,6 +20,6 @@ public class RobotModule extends IterativeModule {
     @Override
     public void robotInit() {
         logger = new Logger("FTB", Logger.ATTR_DEFAULT);
-        //TODO: Module Init
+
     }
 }
