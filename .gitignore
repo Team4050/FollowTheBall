@@ -1,11 +1,10 @@
-# WPILib
-bin/
-build/
-dist/
-sysProps.xml
-workbench.xmi
+#Robot Code Ignore
+Robot/bin/
+Robot/build/
+Robot/dist/
+Robot/sysProps.xml
+Robot/workbench.xmi
 
-# IDE
 *.ipr
 *.iml
 *.iws
@@ -17,8 +16,10 @@ tmp/
 /.idea
 .classpath
 
-# Toast/GradleRIO
-run/
-.gradle/
-gradle/.launch/
+Robot/run/
+Robot/.gradle/
+Robot/gradle/.launch/
+
+#Co-Processor Code Ignore
+
 
