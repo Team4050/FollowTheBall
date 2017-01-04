@@ -1,0 +1,6 @@
+language: java
+sudo: true
+script: 
+-  cd Robot
+- chmod +x ./gradlew
+- ./gradlew build
