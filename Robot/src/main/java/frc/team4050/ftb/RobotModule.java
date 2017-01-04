@@ -1,11 +1,11 @@
 package frc.team4050.ftb;
 
-import jaci.openrio.toast.lib.log.Logger;
+import edu.wpi.first.wpilibj.command.Scheduler;
 import jaci.openrio.toast.lib.module.IterativeModule;
 
 public class RobotModule extends IterativeModule {
 
-    public static Logger logger;
+    public static OI oi;
 
     @Override
     public String getModuleName() {
@@ -19,7 +19,39 @@ public class RobotModule extends IterativeModule {
 
     @Override
     public void robotInit() {
-        logger = new Logger("FTB", Logger.ATTR_DEFAULT);
+        RobotMap.init();
+        oi = new OI();
+    }
 
+    public void teleopInit() {
+        if(autonomousCommand != null) {
+            autonomousCommand.cancel();
+        }
+    }
+
+    public void teleopPeriodic() {
+        Scheduler.getInstance().run();
+    }
+
+    public void autonomousInit() {
+        if(autonomousCommand != null) {
+            autonomousCommand.start();
+        }
+    }
+
+    public void disabledInit() {
+
+    }
+
+    public void disabledPeriodic() {
+        Scheduler.getInstance().run();
+    }
+
+    public void testInit() {
+
+    }
+
+    public void testPeriodic() {
+        Scheduler.getInstance().run();
     }
 }
