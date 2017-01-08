@@ -1,9 +1,12 @@
 package frc.team4050.ftb;
 
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import jaci.openrio.toast.lib.module.IterativeModule;
 
 public class RobotModule extends IterativeModule {
+
+    Command autonomousCommand;
 
     public static OI oi;
 

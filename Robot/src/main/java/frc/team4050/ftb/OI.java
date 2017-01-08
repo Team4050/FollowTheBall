@@ -3,9 +3,6 @@ package frc.team4050.ftb;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 
-/**
- * Created by Carson on 1/2/2017.
- */
 public class OI {
 
     public Joystick xbox;
@@ -32,6 +29,10 @@ public class OI {
 
     public Joystick getJoy2() {
         return joy2;
+    }
+
+    public NetworkTable getCamera() {
+        return visionData;
     }
 
 }
