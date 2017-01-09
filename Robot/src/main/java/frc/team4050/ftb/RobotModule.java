@@ -6,7 +6,7 @@ import jaci.openrio.toast.lib.module.IterativeModule;
 
 public class RobotModule extends IterativeModule {
 
-    Command autonomousCommand;
+    Command autoCommand;
 
     public static OI oi;
 
@@ -27,8 +27,8 @@ public class RobotModule extends IterativeModule {
     }
 
     public void teleopInit() {
-        if(autonomousCommand != null) {
-            autonomousCommand.cancel();
+        if(autoCommand != null) {
+            autoCommand.cancel();
         }
     }
 
@@ -37,8 +37,8 @@ public class RobotModule extends IterativeModule {
     }
 
     public void autonomousInit() {
-        if(autonomousCommand != null) {
-            autonomousCommand.start();
+        if(autoCommand != null) {
+            autoCommand.start();
         }
     }
 
